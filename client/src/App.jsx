@@ -11,6 +11,7 @@ import { useAuthStore } from "./store/useAuthStore";
 import { useEffect } from "react";
 
 import { Loader } from "lucide-react";
+import { Toaster } from "react-hot-toast";
 
 function App() {
   const { authUser, checkAuth, isCheckingAuth } = useAuthStore();
@@ -49,6 +50,8 @@ function App() {
         />
         <Route path="/settings" element={<Settings />} />
       </Routes>
+
+      <Toaster />
     </BrowserRouter>
   );
 }
